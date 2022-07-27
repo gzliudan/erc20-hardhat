@@ -28,6 +28,22 @@
     "npm": ">=6.14.4",
     "yarn": ">=1.22.0"
   },
+  "scripts": {
+    "clean": "rm -rf coverage.json coverage cache artifacts",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "make": "yarn clean && yarn compile && yarn test",
+    "deploy:local": "hardhat run --network local scripts/deploy.js",
+    "deploy:dev": "hardhat run --network dev scripts/deploy.js",
+    "deploy:xinfin": "hardhat run --network xinfin scripts/deploy.js",
+    "deploy:apothem": "hardhat run --network apothem scripts/deploy.js",
+    "deploy:polygon": "hardhat run --network polygon scripts/deploy.js",
+    "deploy:mumbai": "hardhat run --network mumbai scripts/deploy.js",
+    "verify:xinfin": "hardhat run --network xinfin scripts/verify.js",
+    "verify:apothem": "hardhat run --network apothem scripts/verify.js",
+    "verify:polygon": "hardhat run --network polygon scripts/verify.js",
+    "verify:mumbai": "hardhat run --network mumbai scripts/verify.js"
+  },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
