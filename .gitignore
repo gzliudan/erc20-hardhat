@@ -1,0 +1,69 @@
+# IntelliJ IDE
+.idea/
+
+# mac OS
+.DS_Store
+
+# swap
+*.swp
+*.swo
+
+# Runtime data
+*.pid
+pids
+
+# log file
+*.log
+logs
+
+# log from npm
+npm-debug.log*
+
+# log from yarn
+yarn-debug.log*
+yarn-error.log*
+
+yarn.lock
+
+# dependency directory
+node_modules/
+
+# temp files
+temp/
+
+# env variables
+.env
+.env.local
+.env.dev
+.env.prod
+
+# bin
+bin/
+
+# typechain
+typechain
+typechain-types
+
+# hardhat
+cache/
+artifacts/
+
+# hardhat-gas-reporter
+gasReporterOutput.json
+
+# truffle
+build/
+
+# Coverage directory used by tools like istanbul
+coverage/
+coverage.json
+coverageEnv
+
+# temporary artifact from solidity-coverage
+allFiredEvents
+.coverage_artifacts
+.coverage_cache
+.coverage_contracts
+
+# openzeppelin
+.openzeppelin/
