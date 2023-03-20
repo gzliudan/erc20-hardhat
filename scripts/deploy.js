@@ -1,32 +1,36 @@
-// We require the Hardhat Runtime Environment explicitly here. This is optional
-// but useful for running the script in a standalone fashion through `node <script>`.
-//
-// You can also run a script with `npx hardhat run <script>`. If you do that, Hardhat
-// will compile your contracts, add the Hardhat Runtime Environment's members to the
-// global scope, and execute the script.
-const hre = require("hardhat");
+// SPDX-License-Identifier: MIT
 
-async function main() {
-  const currentTimestampInSeconds = Math.round(Date.now() / 1000);
-  const unlockTime = currentTimestampInSeconds + 60;
+// ==================== External Imports ====================
 
-  const lockedAmount = hre.ethers.utils.parseEther("0.001");
+const dotenv = require('dotenv');
 
-  const Lock = await hre.ethers.getContractFactory("Lock");
-  const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
+// ==================== Internal Imports ====================
 
-  await lock.deployed();
+const { getChainInfo, quickDeployContract } = require('./helpers');
 
-  console.log(
-    `Lock with ${ethers.utils.formatEther(
-      lockedAmount
-    )}ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
-  );
+async function deployTestCoin(key, name, symbol) {
+  const contractName = 'TestCoin';
+  const args = [name, symbol];
+  return quickDeployContract(contractName, key, args);
 }
 
-// We recommend this pattern to be able to use async/await everywhere
-// and properly handle errors.
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+async function deployAllContracts() {
+  // print chain information
+  const { chainName, chainId } = getChainInfo();
+  console.log(`\nchain name = ${chainName}, chain id = ${chainId}\n`);
+
+  // setup environment
+  dotenv.config();
+
+  // deploy all contracts
+  await deployTestCoin('test_coin', 'Test Coin', 'TCT');
+}
+
+deployAllContracts()
+  .then(() => {
+    process.exit(0);
+  })
+  .catch((e) => {
+    console.error(e);
+    process.exit(1);
+  });
