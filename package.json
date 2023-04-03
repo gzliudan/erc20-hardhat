@@ -29,6 +29,7 @@
     "yarn": ">=1.22.0"
   },
   "devDependencies": {
+    "dotenv": "^16.0.3",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
