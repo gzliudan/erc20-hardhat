@@ -1,13 +1,70 @@
-# Sample Hardhat Project
+# About this project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This project demonstrates a basic Hardhat use case.
 
-Try running some of the following tasks:
+## Initialize project
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
+Download and initialize this repository:
+
+```bash
+git clone https://github.com/gzliudan/erc20-hardhat.git
+cd erc20-hardhat
+yarn
+```
+
+## Compile contracts
+
+Compile and test contracts:
+
+```bash
+yarn make
+```
+
+or
+
+```bash
+yarn clean
+yarn compile
+yarn test
+```
+
+## Setup secrets
+
+Create and edit file `.env`, set variable `DEPLOYER_PRIVATE_KEY`, also set variable `POLYGONSCAN_API_KEY` if mumbai and polygon network are used.
+
+```bash
+cp env.sample .env
+vi .env
+```
+
+## Deploy contracts
+
+Deploy and verify contracts according to your network:
+
+### 1. Mumbai network
+
+```bash
+yarn deploy:mumbai
+yarn verify:mumbai
+```
+
+### 2. Polygon network
+
+```bash
+yarn deploy:polygon
+yarn verify:polygon
+```
+
+### 3. Apothem netowrk
+
+```bash
+yarn deploy:apothem
+yarn verify:apothem
+```
+
+### 4. Xinfin netowrk
+
+```bash
+yarn deploy:xinfin
+yarn verify:xinfin
 ```
