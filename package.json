@@ -42,7 +42,19 @@
     "verify:xinfin": "hardhat run --network xinfin scripts/verify.js",
     "verify:apothem": "hardhat run --network apothem scripts/verify.js",
     "verify:polygon": "hardhat run --network polygon scripts/verify.js",
-    "verify:mumbai": "hardhat run --network mumbai scripts/verify.js"
+    "verify:mumbai": "hardhat run --network mumbai scripts/verify.js",
+    "deploy-token-v1:local": "hardhat run --network local scripts/deployTestTokenV1.js",
+    "deploy-token-v1:dev": "hardhat run --network dev scripts/deployTestTokenV1.js",
+    "deploy-token-v1:xinfin": "hardhat run --network xinfin scripts/deployTestTokenV1.js",
+    "deploy-token-v1:apothem": "hardhat run --network apothem scripts/deployTestTokenV1.js",
+    "deploy-token-v1:polygon": "hardhat run --network polygon scripts/deployTestTokenV1.js",
+    "deploy-token-v1:mumbai": "hardhat run --network mumbai scripts/deployTestTokenV1.js",
+    "deploy-token-v2:local": "hardhat run --network local scripts/deployTestTokenV2.js",
+    "deploy-token-v2:dev": "hardhat run --network dev scripts/deployTestTokenV2.js",
+    "deploy-token-v2:xinfin": "hardhat run --network xinfin scripts/deployTestTokenV2.js",
+    "deploy-token-v2:apothem": "hardhat run --network apothem scripts/deployTestTokenV2.js",
+    "deploy-token-v2:polygon": "hardhat run --network polygon scripts/deployTestTokenV2.js",
+    "deploy-token-v2:mumbai": "hardhat run --network mumbai scripts/deployTestTokenV2.js"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
