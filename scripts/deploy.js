@@ -8,6 +8,13 @@ const dotenv = require('dotenv');
 
 const { getChainInfo, quickDeployContract } = require('./helpers');
 
+async function deployTest() {
+  const contractName = 'Test';
+  const key = 'test';
+  const args = [];
+  return quickDeployContract(contractName, key, args);
+}
+
 async function deployTestCoin(key, name, symbol) {
   const contractName = 'TestCoin';
   const args = [name, symbol];
@@ -23,6 +30,7 @@ async function deployAllContracts() {
   dotenv.config();
 
   // deploy all contracts
+  await deployTest();
   await deployTestCoin('test_coin', 'Test Coin', 'TCT');
 }
 
