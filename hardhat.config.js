@@ -94,6 +94,10 @@ module.exports = {
       url: 'https://erpc.apothem.network',
       chainId: 51,
     },
+    xdcdev: {
+      url: 'https://devnetstats.apothem.network/devnet',
+      chainId: 551,
+    },
     polygon: {
       url: POLYGONSCAN_RPC_LIST[rpc_index],
       chainId: 137,
