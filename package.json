@@ -45,6 +45,7 @@
     "deploy:mumbai": "hardhat run --network mumbai scripts/deploy.js",
     "verify:xinfin": "hardhat run --network xinfin scripts/verify.js",
     "verify:apothem": "hardhat run --network apothem scripts/verify.js",
+    "verify:xdcdev": "hardhat run --network xdcdev scripts/verify.js",
     "verify:polygon": "hardhat run --network polygon scripts/verify.js",
     "verify:mumbai": "hardhat run --network mumbai scripts/verify.js",
     "deploy-token-v1:local": "hardhat run --network local scripts/deployTestTokenV1.js",

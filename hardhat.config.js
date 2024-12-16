@@ -131,7 +131,7 @@ module.exports = {
       chainId: 51,
     },
     xdcdev: {
-      url: 'https://devnetstats.apothem.network/devnet',
+      url: 'https://devnetstats.hashlabs.apothem.network/devnet',
       chainId: 551,
     },
     polygon: {
@@ -149,6 +149,7 @@ module.exports = {
     apiKey: {
       xinfin: XDC_API_KEY,
       apothem: XDC_API_KEY,
+      xdcdev: XDC_API_KEY,
       polygon: POLYGONSCAN_API_KEY,
       polygonMumbai: POLYGONSCAN_API_KEY,
     },
@@ -167,6 +168,14 @@ module.exports = {
         urls: {
           apiURL: 'https://api-apothem.blocksscan.io/api',
           browserURL: 'https://explorer.apothem.network',
+        },
+      },
+      {
+        network: 'xdcdev',
+        chainId: 551,
+        urls: {
+          apiURL: 'https://devnetapi.blocksscan.io/api',
+          browserURL: 'https://devnet.blocksscan.io/',
         },
       },
     ],
